@@ -20,6 +20,12 @@ namespace _4RTools.Utils
         MISTY_FROST = 1141,
         CRITICALWOUND = 286,
         OVERHEAT = 373,
+        //GENETIC DEBUFFS
+        MANDRAGORA = 470,
+        //SC DEBUFFS
+        GLOOMY = 409,
+        IGNORANCE = 411,
+        WEAKNESS = 418,
 
         ENDURE = 1,
         PAINKILLER = 1,
@@ -147,7 +153,8 @@ namespace _4RTools.Utils
         RESIST_PROPERTY_GROUND = 909,
         RESIST_PROPERTY_FIRE = 910,
         RESIST_PROPERTY_WIND = 911,
-
+        UNDEAD_SCROLL = 2000,
+        
         BOX_OF_THUNDER = 289,
         SPEED_POT = 41,
 
