@@ -79,7 +79,7 @@ namespace _4RTools.Forms
 
         private void onSitStatusKeyChange(object sender, EventArgs e)
         {
-            Key k = (Key)Enum.Parse(typeof(Key), this.txtNewStatusKey.Text.ToString());
+            Key k = (Key)Enum.Parse(typeof(Key), this.SitStatusKey.Text.ToString());
 
             ProfileSingleton.GetCurrent().StatusRecovery.AddKeyToBuff(EffectStatusIDs.SIT, k);
             ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().StatusRecovery);
@@ -87,7 +87,7 @@ namespace _4RTools.Forms
 
         private void onDevoStatusKeyChange(object sender, EventArgs e)
         {
-            Key k = (Key)Enum.Parse(typeof(Key), this.txtNewStatusKey.Text.ToString());
+            Key k = (Key)Enum.Parse(typeof(Key), this.DevoStatusKey.Text.ToString());
 
             ProfileSingleton.GetCurrent().StatusRecovery.AddKeyToBuff(EffectStatusIDs.DEVOTION, k);
             ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().StatusRecovery);
