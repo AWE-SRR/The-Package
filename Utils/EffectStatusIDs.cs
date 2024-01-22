@@ -7,7 +7,7 @@ namespace _4RTools.Utils
     {
         //PEPEGAS
         SIT = 622,
-        DEVOTION = 60
+        DEVOTION = 60,
         
         //Status
         POISON = 883,
