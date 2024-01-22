@@ -20,6 +20,13 @@ namespace _4RTools.Forms
             this.txtNewStatusKey.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
             this.txtNewStatusKey.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
             this.txtNewStatusKey.TextChanged += new EventHandler(on3RDStatusKeyChange);
+            this.SitStatusKey.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
+            this.SitStatusKey.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
+            this.SitStatusKey.TextChanged += new EventHandler(onSitStatusKeyChange);
+            this.DevoStatusKey.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
+            this.DevoStatusKey.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
+            this.DevoStatusKey.TextChanged += new EventHandler(onDevoStatusKeyChange);
+            
         }
 
         public void Update(ISubject subject)
@@ -67,6 +74,22 @@ namespace _4RTools.Forms
             //ProfileSingleton.GetCurrent().StatusRecovery.AddKeyToBuff(EffectStatusIDs.CRITICALWOUND, k);
             //ProfileSingleton.GetCurrent().StatusRecovery.AddKeyToBuff(EffectStatusIDs.OVERHEAT, k);
             ProfileSingleton.GetCurrent().StatusRecovery.AddKeyToBuff(EffectStatusIDs.MANDRAGORA, k);
+            ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().StatusRecovery);
+        }
+
+        private void onSitStatusKeyChange(object sender, EventArgs e)
+        {
+            Key k = (Key)Enum.Parse(typeof(Key), this.txtNewStatusKey.Text.ToString());
+
+            ProfileSingleton.GetCurrent().StatusRecovery.AddKeyToBuff(EffectStatusIDs.SIT, k);
+            ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().StatusRecovery);
+        }
+
+        private void onDevoStatusKeyChange(object sender, EventArgs e)
+        {
+            Key k = (Key)Enum.Parse(typeof(Key), this.txtNewStatusKey.Text.ToString());
+
+            ProfileSingleton.GetCurrent().StatusRecovery.AddKeyToBuff(EffectStatusIDs.DEVOTION, k);
             ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().StatusRecovery);
         }
     }
