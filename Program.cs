@@ -16,7 +16,13 @@ namespace _4RTools
 
             //Forms.ClientUpdaterForm app = new Forms.ClientUpdaterForm();
             //Forms.Container app = new Forms.Container();
-            Forms.AutoPatcher app = new Forms.AutoPatcher();
+            //Forms.AutoPatcher app = new Forms.AutoPatcher();
+
+            // Bypass ClientUpdaterForm and directly call Container
+            Forms.Container app = new Forms.Container();
+            //Container app = new Container();
+            //Application.Run(app);
+            
             System.Windows.Forms.Application.Run(app);
         }
     }
