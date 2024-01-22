@@ -5,6 +5,10 @@ namespace _4RTools.Utils
     [Flags]
     public enum EffectStatusIDs : uint
     {
+        //PEPEGAS
+        SIT = 622,
+        DEVOTION = 60
+        
         //Status
         POISON = 883,
         SILENCE = 885,
